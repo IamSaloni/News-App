@@ -1,4 +1,4 @@
-import react from 'react'
+import React from 'react'
 
 class StoriesDetails extends React.Component {
     render() {
