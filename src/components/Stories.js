@@ -1,7 +1,7 @@
 import React from 'react'
 
-const Story = () => (
-    <li></li>
+const Story = ({title}) => (
+    <li>{title}</li>
 )
 
 class Stories extends React.Component {
@@ -9,7 +9,9 @@ class Stories extends React.Component {
         return (
             <div>
                 <ul>
-            
+                    {this.props.hits.map((value,index)=>{
+                            return <Story key={index} title={value.title} />
+                    })}
                 </ul>
             </div>
         )
