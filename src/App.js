@@ -3,8 +3,9 @@ import './App.css';
 
 // import { BrowserRouter , Route, Link } from "react-router-dom";
 // import createBrowserHistory from "history/createBrowserHistory";
-import StoriesDetails from "./components/StoriesDetails"
+// import StoriesDetails from "./components/StoriesDetails"
 import Stories from "./components/Stories"
+
 
 class App extends Component {
   constructor(props){
@@ -22,7 +23,7 @@ class App extends Component {
               // console.log(data.hits)
               this.setState({
                 loading: false,
-                hits: data.hits 
+                hits: data.hits
               })
           })
   }
