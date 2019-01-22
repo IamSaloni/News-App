@@ -1,26 +1,30 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {Router, Route, Link } from "react-router-dom";
+import createBrowserHistory from "history/createBrowserHistory";
+import StoriesDetails from "./components/StoriesDetails"
+import Stories from "./components/Stories"
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      hits : []
+    }
+  }
+
+  componentDidMount() {
+    
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+     <Router>
+       <div>
+         <Route path="/" component={Stories}></Route>
+         <Route path="/Stories" component={StoriesDetails}></Route>
+       </div>
+     </Router>
     );
   }
 }
